@@ -1,0 +1,554 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+    list-style: none;
+}
+
+:root {
+	--purple-dark: #170312;
+	--purple-medium: #d3bc81;
+    --purple-light: #d6cb88;
+    --gray-light: #eaeaea;
+    --white: #f4fffd;
+}
+
+body {
+	font-size: 20px;
+	font-family: 'Noto Serif', serif;
+}
+
+p {
+	font-size: 22px;
+}
+
+
+.enlace{
+    position: absolute;
+    padding:10px ;
+}
+.logo{
+	position: fixed;
+	left: 10px;
+	top: 0px;
+	
+}
+
+
+li a.active, li a:hover{
+    background: #d6cb88;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+.contenido-header {
+	width: 150%;
+	height: 60vh;
+	background-image: url(../img/fondo.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+.contenido-header .texto {
+	width: calc(100vw - 20px);
+	height: 100vh;
+	font-size: 90px;
+	font-weight: 400;
+	font-family: 'Noto Serif', serif;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgb(15, 15, 15);
+}
+
+
+/* ------------------------- */
+/* Nosotros */
+/* ------------------------- */
+.nosotros {
+	margin-bottom: 60px;
+}
+
+.subtitulo {
+	font-size: 20px;
+	color: var(--purple-dark);
+	font-family: 'Noto Serif', serif;
+	font-weight: 700;
+	z-index: 2;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.subtitulo span {
+	background-color: var(--gray-light);
+	padding: 0 15px;
+	z-index: 99;
+	position: relative;
+}
+
+.subtitulo::after {
+	content: "";
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	background: var(--purple-dark);
+	position: relative;
+	top: -29px;
+	z-index: 1;
+}
+
+.nosotros .titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+.nosotros .enlace {
+	display: inline-block;
+	margin-top: 40px;
+	color: var(--purple-light);
+	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	transition: .3s ease all;
+}
+
+.nosotros .enlace:hover {
+	text-decoration: none;
+	letter-spacing: 3px;
+	border-bottom: 1px solid var(--purple-light);
+}
+
+/* ------------------------- */
+/* Productos */
+/* ------------------------- */
+.productos {
+	background: var(--gray-light);
+	padding: 20px;
+	margin-bottom: 60px;
+}
+
+.productos .titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+.productos .producto {
+	position: relative;
+	width: 100%;
+}
+
+.productos .overlay {
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--purple-light);
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+.productos .producto:hover .overlay{
+	width: 100%;
+	opacity: .8;
+}
+
+.productos .producto .overlay-texto {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	white-space: nowrap;
+	color: var(--white);
+	font-size: 18px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.productos .btn-productos {
+	background-color: var(--purple-light);
+	color: #fff;
+	padding: 7px 20px;
+	text-transform: uppercase;
+	font-size: 16px;
+	border: 2px solid transparent;
+	transition: .3s ease;
+}
+
+.productos .btn-productos:hover {
+	background-color: transparent;
+	border: 2px solid var(--purple-light);
+	color: var(--purple-light);
+}
+
+/* ------------------------- */
+/* Separador */
+/* ------------------------- */
+.separador {
+	width: 100%;
+	height: 250px;
+	background-image: url('../img/fondo2.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 60px;
+	color: black;
+}
+
+.separador p {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-family: 'Noto Serif', serif;
+	padding: 10px;
+	color: black;
+}
+
+/* ------------------------- */
+/* Acerca de */
+/* ------------------------- */
+.acerca-de {
+	margin-bottom: 60px;
+}
+
+/* ------------------------- */
+/* Galeria */
+/* ------------------------- */
+.galeria {
+	margin-bottom: 60px;
+}
+
+.galeria img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.contacto {
+	margin-bottom: 60px;
+}
+
+.redes-sociales {
+	padding: 10px;
+	background-color: var(--purple-light);
+}
+
+.redes-sociales img {
+	padding: 10px;
+	border-radius: 250%;
+	width: 60px;
+	transition: .3s ease all;
+}
+
+.redes-sociales img:hover {
+	transform: scale(1.2);
+}
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 992px) {
+	p {
+		font-size: 18px;
+	}
+
+	.contenido-header .texto {
+		font-size: 60px;
+		
+	}
+
+	.menu a {
+		font-size: 10px;
+	}
+
+	.nosotros .titulo,
+	.productos .titulo {
+		font-size: 30px;
+	}
+
+}
+.contenedor{
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: 0;
+		padding: 2em;
+		float: left;
+	}
+	.containerX{
+	float: left;
+	}
+	
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+	
+
+	/*MENU*/
+	.barra {
+		font-family: 'Lato', sans-serif;
+		/**Alto y ancho de donde se va a activar cuando pase el mouse**/
+		width:10%;
+		height:9%;
+		/*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+		position:fixed;
+		/*Tiempo en el que va a transitar la animacion*/
+		transition: .4s all ;
+		/*este arriba de todo en la pantalla*/
+		z-index: 1;  
+	}
+	
+	.barra ul{
+		/*solucionar espacios no deseados*/
+		padding:0px;
+		text-align: center;
+			
+	}
+	.barra  li{
+		/*Velocidad de transicion del contenido*/
+		transition:all .4s;
+		list-style: none; 
+	}
+	
+	.barra a{
+		text-decoration: none;
+		
+		font-weight: normal;
+		
+		/*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+		transition: .3s all ;
+		/*Se ocultan los elementos*/
+		font-size: 0px;
+		padding:0px;
+	}
+	
+	.barra  h2{
+		text-align: center;
+		color:white;
+		padding:7px;
+		padding-bottom:7px;
+	
+		/*Se oculta el h2*/
+		font-size:0px;   
+	}
+	
+	.barra img{
+		padding-top: 30px;
+		padding-left: 10px;
+	}
+	
+	.barra:hover{
+		/*Tamaño cuando el cursor señale la barra*/
+		width: 70%;
+		height: 100vh;
+		
+		/*Color*/
+		background: rgba(5, 33, 51, 0.98);
+	}
+	.barra:hover h2{
+		/*posicion dentro de barra del h2*/
+		padding:15px;
+		font-size: 35px;
+	}
+	.barra:hover a{ 
+		font-size:20px ;
+		color:white;
+		/*Se usa el display block para que el enlace respete el margin*/
+		display: block;
+		padding:20px;
+	}
+	.barra:hover img{
+		/*Desaparecer la imagen*/
+		height:0px;
+	}
+	
+	
+	.barra:hover li{
+		border-top:1px solid #03121b;
+		/*Espacios entre las lineas y el contenido*/
+		
+		width:100%;
+			
+	}
+	.barra:hover ul:last-of-type{
+	
+	
+		border-bottom: 1px solid #03121b;
+	}
+	
+	.barra:hover a:hover{ 
+		font-size: 25px;
+		padding: 30px 0px; 
+		background: rgba(23, 78, 112, 0.98);  
+	}
+	
+	@media (min-width: 768px){
+		.barra:hover{
+		width: 45%;
+		}
+	}
