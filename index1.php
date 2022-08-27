@@ -13,7 +13,19 @@
 	<link rel="stylesheet" href="Productos/index2">
 
 	
-	
+	<style>
+		.ejemplo{
+			color: black ;
+		position: absolute;
+		left : 40%;
+		background-color: white ;
+		}
+		@media (max-width: 600px){
+		.ejemplo{
+			left : 10%;
+		}
+	}
+	</style>
 	
 	<body>
 		
@@ -33,35 +45,34 @@
 			<li><a class="active" href="estudio.php">Estudio</a></li>
             <p><li><a href="index.php">Salir</a></li></p>
 			
+			
         </center></ul>
     
 </div> 
+
 </header>
 <header>
 	<article class="col-12 text-center">
 				
-				
-			
-				<footer class="row justify-content-center redes-sociales">
-							<div class="col-auto">
-							<p class="titulo">E BUSINESS CJ</p> 
-								
-							</div>
-							<p><a href="index.php"><img src="img/icons/admi.png" alt="">Mi cuenta</a></p>
-						</footer>
-					</div>
+		<footer class="row justify-content-center redes-sociales">
+			<div class="col-auto">
+			<p class="titulo">E BUSINESS CJ</p> 
+			</div>
+			<p><a href="index.php"><img src="img/icons/admi.png" alt="">Mi cuenta</a></p>
+		</footer>
+					
 </header>
 
 
 	<div class="contenido-header">
 		<div class="fondo" id="fondo">
-			<center><h1 class="texto">BIENVENIDOS,<br>
-				 EBANISTERÍA VIRTUAL</h1></center>
+			<h1 class=""><ejemplo class="ejemplo">BIENVENIDOS,<br>
+				 EBANISTERÍA VIRTUAL </ejemplo></h1>
 		</div>
 	</div>
 
 
-	<main class="container">
+	<main class="">
 		<div class="row nosotros justify-content-center">
 			<div class="col-12 text-center">
 				<h2 class="subtitulo"><span>BIENVENIDOS</span></h2>
@@ -72,7 +83,7 @@
 			</div>
 		</div>
 
-		<div class="row productos">
+	<div class="ejemplocontenedor" style=" width: 100%;">
 			<article class="col-12 text-center">
 				<h2 class="subtitulo"><span>En EBUSINESS CJ creemos que cualquier momento es el indicado para renovar los espacios</span></h2>
 				<p class="titulo">Nuestros Produtos</p>
@@ -127,7 +138,7 @@
 				</div>
 			</div>
 		</div>
-	</main>
+</main>
 
 	<div class="separador text-center text-white">
 		<p><q>Un nuevo look para tu hogar</q></p>
@@ -176,7 +187,9 @@
 			</div>
 		</div>
 	</div>
-
+	<br>
+<hr  style="background-image: linear-gradient(to left, red, blue,yellow); height: 80px;">
+<br>
 	<div class="container-fluid">
 		<section class="contacto row justify-content-center">
 			<div class="col-12 col-md-9 text-center">

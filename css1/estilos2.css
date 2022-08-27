@@ -181,6 +181,7 @@ li a.active, li a:hover{
 	background: var(--gray-light);
 	padding: 20px;
 	margin-bottom: 60px;
+	
 }
 
 .productos .titulo {
@@ -547,8 +548,45 @@ li a.active, li a:hover{
 		background: rgba(23, 78, 112, 0.98);  
 	}
 	
+	/* ESTILOS PARA CELULAR*/
 	@media (min-width: 768px){
 		.barra:hover{
 		width: 45%;
 		}
 	}
+	
+	.ejemplo{
+		color: black ;
+	position: absolute;
+	left : 40%;
+	background-color: white ;
+	}
+	@media (max-width: 600px){
+	.ejemplo{
+		left : 10%;
+	}
+}
+/* ESTILOS DE WHATSAPP*/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
