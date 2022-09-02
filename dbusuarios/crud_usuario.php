@@ -56,4 +56,9 @@ class CrudUsuario{
         }
         return $usado;
     }
+    public function numeroUsuarios(){
+        $db=DB::conectar();
+        $select=$db->prepare('SELECT COUNT(fullname) FROM usuario');
+        return $select;
+    }
 }
