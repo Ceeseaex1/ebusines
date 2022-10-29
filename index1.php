@@ -25,6 +25,7 @@
 			left : 10%;
 		}
 	}
+	
 	</style>
 	
 	<body>
@@ -173,11 +174,11 @@
 			</article>
 		</div>
 	</div>
-
+<div class="container">
 	<div class="container-fluid px-0 galeria">
 		<div class="row justify-content-center mx-0 px-0">
 			<div class="col-4 px-0 mx-0">
-				<img src="img/display/img-01.jpeg" alt="">
+			<img src="img/display/img-01.jpeg" alt=""> -->
 			</div>
 			<div class="col-4 px-0 mx-0">
 				<img src="img/display/img-02.jpg" alt="">
@@ -186,6 +187,7 @@
 				<img src="img/display/img-03.jpg" alt="">
 			</div>
 		</div>
+	</div>
 	</div>
 	<br>
 <hr  style="background-image: linear-gradient(to left, red, blue,yellow); height: 80px;">
